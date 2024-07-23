@@ -66,7 +66,7 @@ public class MainPageTest {
     {
 
         try {                                   //warten bis neue Seite / login lädt
-            Thread.sleep(9000);
+            Thread.sleep(20000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
