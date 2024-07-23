@@ -27,7 +27,7 @@ public class MainPageTest {
 
     @BeforeTest
     public static void setUpAll() {
-        Configuration.browserSize = "1480x800";
+        Configuration.browserSize = "1280x800";
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
@@ -37,7 +37,7 @@ public class MainPageTest {
         open("https://web.magentatv.de/");
 
         try {
-            Thread.sleep(9000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -52,7 +52,7 @@ public class MainPageTest {
     public void loginButtonExists() {
 
         try {
-            Thread.sleep(9000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
