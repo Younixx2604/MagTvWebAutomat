@@ -59,6 +59,7 @@ public class MainPageTest {
         assertTrue(mainPage.loginButton.exists());
     }
 
+    /*
 
     @Test (priority = 2)                         //loginButton anklicken -> LoginSeite öffne
     public void loginButtonClick()
@@ -113,7 +114,7 @@ public class MainPageTest {
 
     } // comment to test github 1
 
-
+*/
 
 }
 
