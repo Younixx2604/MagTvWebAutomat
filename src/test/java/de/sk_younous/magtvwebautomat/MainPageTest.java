@@ -37,7 +37,7 @@ public class MainPageTest {
         open("https://web.magentatv.de/");
 
         try {
-            Thread.sleep(6000);
+            Thread.sleep(9000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -52,7 +52,7 @@ public class MainPageTest {
     public void loginButtonExists() {
 
         try {
-            Thread.sleep(6000);
+            Thread.sleep(9000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -69,7 +69,7 @@ public class MainPageTest {
 
 
         try {                                   //warten bis neue Seite / login lädt
-            Thread.sleep(3000);
+            Thread.sleep(9000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
