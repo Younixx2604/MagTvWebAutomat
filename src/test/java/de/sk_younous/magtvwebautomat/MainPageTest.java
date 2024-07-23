@@ -37,7 +37,7 @@ public class MainPageTest {
         open("https://web.magentatv.de/");
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(6000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
