@@ -65,14 +65,14 @@ public class MainPageTest {
     public void loginButtonClick()
     {
 
-        mainPage.loginButton.click();
-
-
         try {                                   //warten bis neue Seite / login lädt
             Thread.sleep(9000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+        
+        mainPage.loginButton.click();
+
 
         String expectedUrl = "https://accounts.login.idm.telekom.com";
         String actualUrl = WebDriverRunner.getWebDriver().getCurrentUrl();
