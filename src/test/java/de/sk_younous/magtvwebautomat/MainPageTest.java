@@ -52,14 +52,14 @@ public class MainPageTest {
     public void loginButtonExists() {
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(6000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         assertTrue(mainPage.loginButton.exists());
     }
 
-    /*
+    
 
     @Test (priority = 2)                         //loginButton anklicken -> LoginSeite öffne
     public void loginButtonClick()
@@ -80,7 +80,7 @@ public class MainPageTest {
         assertTrue(actualUrl.contains(expectedUrl));
     }
 
-
+/*
     @Test (priority = 3)                        //mit falschen Login daten
     public void Neglogin()
     {
