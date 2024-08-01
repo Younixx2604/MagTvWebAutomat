@@ -22,7 +22,7 @@ public class LoginButtonAnklicken_KAN_T32 {
     @Given("der Login Button wurde auf der Homepage gefunden")
     public void der_login_button_wurde_auf_der_homepage_gefunden() {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(9000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
