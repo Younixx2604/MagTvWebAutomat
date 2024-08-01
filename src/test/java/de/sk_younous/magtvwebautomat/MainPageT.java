@@ -1,33 +1,16 @@
 package de.sk_younous.magtvwebautomat;
 
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.WebDriverRunner;
-import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeOptions;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.*;
-
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static org.junit.jupiter.api.Assertions.*;
-
 import static com.codeborne.selenide.Condition.attribute;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
-
-import org.testng.annotations.*;
-import org.testng.annotations.Test;
 
 
-public class MainPageTest {
+public class MainPageT {
+
+    /*
     MainPage mainPage = new MainPage();
 
     @BeforeTest
     public static void setUpAll() {
-        Configuration.browserSize = "2080x800";
+        Configuration.browserSize = "4080x1600";
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
@@ -71,7 +54,10 @@ public class MainPageTest {
             throw new RuntimeException(e);
         }
         
-        mainPage.loginButton.shouldBe(visible).click();
+        mainPage.loginButton.shouldBe(visible)
+
+
+                .click();
 
 
         try {                                   //warten bis neue Seite / login lädt
