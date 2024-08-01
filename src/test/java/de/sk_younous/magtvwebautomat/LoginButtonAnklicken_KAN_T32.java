@@ -21,17 +21,16 @@ public class LoginButtonAnklicken_KAN_T32 {
     }
     @Given("der Login Button wurde auf der Homepage gefunden")
     public void der_login_button_wurde_auf_der_homepage_gefunden() {
-        try {
-            Thread.sleep(9000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+
+        if($(By.id("MENU-LOGIN")).exists()) {
+            $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible);
+            assertTrue($(By.id("MENU-LOGIN")).isDisplayed());
         }
-        $(By.id("MENU-LOGIN")).shouldBe(Condition.visible);
     }
     @Given("man den Coockies Banner schliesst")
     public void man_den_coockies_banner_schliesst() {
                        if($(By.id("OVERLAY-ACCEPT")).exists())
-                           $(By.id("OVERLAY-ACCEPT")).click();
+                           $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible).click();
     }
 
     @When("der Benutzer den roten Login Button anklickt")
