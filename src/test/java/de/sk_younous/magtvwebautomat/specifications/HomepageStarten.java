@@ -21,6 +21,7 @@ public class HomepageStarten {
         ChromeOptions options = new ChromeOptions();
         // Optionen hinzufügen, um das Suchmaschinen-Pop-up zu umgehen
         options.addArguments("--disable-search-engine-choice-screen");
+        options.addArguments("--start-maximized");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
         Configuration.browserSize = "1480x800";
