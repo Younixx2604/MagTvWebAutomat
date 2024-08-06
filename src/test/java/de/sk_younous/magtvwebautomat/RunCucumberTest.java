@@ -7,9 +7,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"de.sk_younous.magtvwebautomat"},
-        plugin = {"pretty", "html:target/cucumber-reports"},
-        monochrome = true
+        glue = {"de.sk_younous.magtvwebautomat.specifications"},
+        plugin = {"pretty", "html:target/cucumber-reports"}
+        //,
+        //monochrome = true
 )
 public class RunCucumberTest {
 }
