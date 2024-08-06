@@ -23,6 +23,7 @@ public class HomepageStarten {
         options.addArguments("--disable-search-engine-choice-screen");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
+        Configuration.browserSize = "1480x800";
         // Initialisieren des WebDriver mit den Optionen
         //WebDriverRunner.setWebDriver(new ChromeDriver(options));
 
