@@ -22,6 +22,7 @@ public class HomepageStarten {
         // Optionen hinzufügen, um das Suchmaschinen-Pop-up zu umgehen
         options.addArguments("--disable-search-engine-choice-screen");
         options.addArguments("--start-maximized");
+        options.addArguments("--headless");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
         Configuration.browserSize = "1480x800";
