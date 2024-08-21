@@ -7,7 +7,7 @@ import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 
 

@@ -8,9 +8,9 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import static com.codeborne.selenide.Selenide.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+//import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HomepageStarten {
+public class Homepage_Oeffnen_KAN_30 {
 
 
 
@@ -22,7 +22,7 @@ public class HomepageStarten {
         // Optionen hinzufügen, um das Suchmaschinen-Pop-up zu umgehen
         options.addArguments("--disable-search-engine-choice-screen");
         options.addArguments("--start-maximized");
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
         Configuration.browserSize = "1480x800";
@@ -35,13 +35,9 @@ public class HomepageStarten {
     }
     @When("der Benutzer die URL {string} öffnet")
     public void der_benutzer_die_url_öffnet(String string) {
-
         open(string);
-
-
-
-        //throw new io.cucumber.java.PendingException();
     }
+
     @Then("der URL der göffnete Seite sollte {string} enthalten")
     public void der_titel_der_göffnete_seite_sollte_enthalten(String string) throws InterruptedException {
 
@@ -50,6 +46,7 @@ public class HomepageStarten {
         Thread.sleep(3000);
 
         //assertTrue(actulesURL.contains(string));
+
         //throw new io.cucumber.java.PendingException();
     }
 
