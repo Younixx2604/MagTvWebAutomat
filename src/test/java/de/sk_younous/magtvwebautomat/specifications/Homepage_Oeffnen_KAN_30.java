@@ -25,7 +25,7 @@ public class Homepage_Oeffnen_KAN_30 {
         //options.addArguments("--headless");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
-        Configuration.browserSize = "1380x800";
+        Configuration.browserSize = "1480x800";
         // Initialisieren des WebDriver mit den Optionen
         //WebDriverRunner.setWebDriver(new ChromeDriver(options));
 
