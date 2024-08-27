@@ -29,6 +29,8 @@ public class LoginButtonFinden_KAN_T31 {
             */
             open(string);
 
+
+
         }
 
 
@@ -42,6 +44,12 @@ public class LoginButtonFinden_KAN_T31 {
                 }
 
                ///assertTrue($(By.id("MENU-LOGIN")).isDisplayed());
+
+            //
+            //////
+            if($(By.id("OVERLAY-ACCEPT")).exists())
+                $(By.id("OVERLAY-ACCEPT")).click();
+
             $(By.id("MENU-LOGIN")).shouldBe(Condition.visible);
 
         }
@@ -49,9 +57,6 @@ public class LoginButtonFinden_KAN_T31 {
             @And("der Login Button sollte klickbar sein")
             public void der_login_button_sollte_funktionnieren()
             {
-
-                if($(By.id("OVERLAY-ACCEPT")).exists())
-                    $(By.id("OVERLAY-ACCEPT")).click();
                 $(By.id("MENU-LOGIN")).click();
 
             }
