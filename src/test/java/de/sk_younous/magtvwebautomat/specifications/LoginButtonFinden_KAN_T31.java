@@ -27,6 +27,7 @@ public class LoginButtonFinden_KAN_T31 {
             ChromeOptions options = new ChromeOptions();    // Optionen hinzufügen, um das Suchmaschinen-Pop-up zu umgehen
             options.addArguments("--disable-search-engine-choice-screen");
             options.addArguments("--start-maximized"); //--start-fullscreen //options.addArguments("--headless");
+            options.addArguments("--headless");
             //options.addArguments("--start-fullscreen");
             //Configuration.browser = "chrome";
             Configuration.browserCapabilities = options;
