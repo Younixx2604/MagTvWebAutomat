@@ -25,7 +25,7 @@ public class LoginButtonAnklicken_KAN_T32 {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-search-engine-choice-screen");
         options.addArguments("--start-maximized");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
         open(string);
