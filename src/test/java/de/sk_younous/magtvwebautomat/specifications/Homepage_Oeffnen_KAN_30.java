@@ -45,6 +45,7 @@ public class Homepage_Oeffnen_KAN_30 {
         assertTrue(actulesURL.contains(string));
 
         //throw new io.cucumber.java.PendingException();
+        closeWebDriver();
     }
 
 

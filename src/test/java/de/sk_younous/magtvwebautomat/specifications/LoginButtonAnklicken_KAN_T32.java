@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.Assert.assertTrue;
 
@@ -29,24 +31,14 @@ public class LoginButtonAnklicken_KAN_T32 {
         Configuration.browserSize = "1480x800";
         // Initialisieren des WebDriver mit den
 
-
         open(string);
-
-
-        //////
-        if($(By.id("OVERLAY-ACCEPT")).exists())
-            $(By.id("OVERLAY-ACCEPT")).click();
-
     }
     @Given("man den Coockies Banner schliesst")
     public void man_den_coockies_banner_schliesst() {
-                       if($(By.id("OVERLAY-ACCEPT")).exists())
-                           $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible).click();
+        $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible, Duration.ofMillis(3000)).click();
     }
     @Given("der Login Button wurde auf der Homepage gefunden")
     public void der_login_button_wurde_auf_der_homepage_gefunden() {
-
-
         if($(By.id("MENU-LOGIN")).exists()) {
             $(By.id("MENU-LOGIN")).shouldBe(Condition.visible);
             assertTrue($(By.id("MENU-LOGIN")).isDisplayed());
