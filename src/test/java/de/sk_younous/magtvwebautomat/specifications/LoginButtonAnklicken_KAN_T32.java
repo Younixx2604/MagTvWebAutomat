@@ -25,12 +25,9 @@ public class LoginButtonAnklicken_KAN_T32 {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-search-engine-choice-screen");
         options.addArguments("--start-maximized");
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
-        Configuration.browserSize = "1480x800";
-        // Initialisieren des WebDriver mit den
-
         open(string);
     }
     @Given("man den Coockies Banner schliesst")
