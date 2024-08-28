@@ -8,7 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"de.sk_younous.magtvwebautomat.specifications"},
-        plugin = {"pretty", "html:target/cucumber-reports"},
+        plugin = {"pretty",
+                "html:target/cucumber-reports",
+               // "json:target/cucumber-reports/Cucumber.json",
+                // "junit:target/cucumber-reports/Cucumber.xml"
+        },
         monochrome = true
 )
 
