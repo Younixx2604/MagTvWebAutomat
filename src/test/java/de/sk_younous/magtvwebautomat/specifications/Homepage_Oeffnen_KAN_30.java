@@ -19,16 +19,15 @@ public class Homepage_Oeffnen_KAN_30 {
     @Given("der Benutzer hat einen Webbrowser geöffnet")
     public void der_benutzer_hat_einen_webbrowser_geöffnet() {
 
-
         ChromeOptions options = new ChromeOptions();    // Optionen hinzufügen, um das Suchmaschinen-Pop-up zu umgehen
         options.addArguments("--disable-search-engine-choice-screen");
-        options.addArguments("--start-maximized"); //--start-fullscreen //options.addArguments("--headless");
-        //options.addArguments("--start-fullscreen");
+        options.addArguments("--start-maximized"); //options.addArguments("--headless");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
-        Configuration.browserSize = "1480x800";
-        // Initialisieren des WebDriver mit den Optionen
+        //Configuration.browserSize = "1480x800";
         WebDriverRunner.setWebDriver(new ChromeDriver(options));
+
+        open("about:blank");
     }
     @When("der Benutzer die URL {string} öffnet")
     public void der_benutzer_die_url_öffnet(String string) {
