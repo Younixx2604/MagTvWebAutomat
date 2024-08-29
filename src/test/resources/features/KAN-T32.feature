@@ -3,7 +3,7 @@ Feature: Auto_Login_Button_anklicken_&_Login_Seite_öffnen
     Scenario: Auto_Login_Button_anklicken_&_Login_Seite_öffnen
         
         Given die MagentaTV Homepage  "https://web.magentatv.de/" ist geöffnet
-        And der Login Button wurde auf der Homepage gefunden
         And man den Coockies Banner schliesst
+        And der Login Button wurde auf der Homepage gefunden
         When der Benutzer den roten Login Button anklickt
         Then sollte der URL der Login-Seite  "https://accounts.login.idm.telekom.com/oauth2" enthalten
