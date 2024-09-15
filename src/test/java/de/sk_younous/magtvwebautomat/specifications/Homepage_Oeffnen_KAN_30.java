@@ -39,12 +39,12 @@ public class Homepage_Oeffnen_KAN_30 {
 
 
         String actulesURL =  WebDriverRunner.getWebDriver().getCurrentUrl();
-        //Thread.sleep(3000);
-
         assertTrue(actulesURL.contains(string));
 
-        //throw new io.cucumber.java.PendingException();
+        Thread.sleep(3000);
+
         closeWebDriver();
+
     }
 
 

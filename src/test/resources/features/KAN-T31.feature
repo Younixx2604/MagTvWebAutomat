@@ -5,4 +5,3 @@ Feature: Auto_Login_Button_finden
         Given der Benutzer die MagentaTv Homepage "https://web.magentatv.de/" öffnet
         And man schliesst Coockies
         Then sollte ein roter Login Button sichtbar sein
-        And der Login Button sollte klickbar sein

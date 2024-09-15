@@ -6,6 +6,7 @@ import com.codeborne.selenide.WebDriverRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,21 +26,15 @@ public class LoginButtonAnklicken_KAN_T32 {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-search-engine-choice-screen");
         options.addArguments("--start-maximized");
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         //Configuration.browser = "chrome";
         Configuration.browserCapabilities = options;
         open(string);
     }
+
     @Given("man den Coockies Banner schliesst")
     public void man_den_coockies_banner_schliesst() {
         $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible, Duration.ofMillis(3000)).click();
-    }
-    @Given("der Login Button wurde auf der Homepage gefunden")
-    public void der_login_button_wurde_auf_der_homepage_gefunden() {
-        if($(By.id("MENU-LOGIN")).exists()) {
-            $(By.id("MENU-LOGIN")).shouldBe(Condition.visible);
-            assertTrue($(By.id("MENU-LOGIN")).isDisplayed());
-        }
     }
 
     @When("der Benutzer den roten Login Button anklickt")
@@ -50,9 +45,11 @@ public class LoginButtonAnklicken_KAN_T32 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-       // $(By.id("MENU-LOGIN")).shouldBe(Condition.visible).click();
+        // $(By.id("MENU-LOGIN")).shouldBe(Condition.visible).click();
+        $(By.id("MENU-LOGIN")).shouldBe(Condition.visible);
         $(By.id("MENU-LOGIN")).click();
     }
+
     @Then("sollte der URL der Login-Seite  {string} enthalten")
     public void sollte_der_url_der_login_seite_enthalten(String string) {
         try {
@@ -60,9 +57,10 @@ public class LoginButtonAnklicken_KAN_T32 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String aktuellesURL =  WebDriverRunner.getWebDriver().getCurrentUrl();
+        String aktuellesURL = WebDriverRunner.getWebDriver().getCurrentUrl();
         assertTrue(aktuellesURL.contains(string));
 
+        closeWebDriver();
     }
 
 
