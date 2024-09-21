@@ -9,9 +9,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         glue = {"de.sk_younous.magtvwebautomat.specifications"},
         plugin = {"pretty",
-                "junit:target/cucumber-reports/Cucumber.xml",
-                "html:target/cucumber-reports/Cucumber.html",
-                "json:target/cucumber-reports/Cucumber.json",
+                "junit:target/cucumber-reports/cucumber.xml",
+                "html:target/cucumber-reports/cucumber.html",
+                "json:target/cucumber-reports/cucumber.json",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         },
         monochrome = true
