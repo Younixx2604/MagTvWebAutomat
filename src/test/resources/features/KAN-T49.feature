@@ -5,4 +5,4 @@ Feature: "KIDS" - Navigationselement
         Given "https://web.magentatv.de/" ist geöffnet
         And Coockies schliesst
         When man "KIDS - Navigationselement" clickt
-        Then "https://web.magentatv.de/kinde" Seite wird geöffnet
+        Then "https://web.magentatv.de/kinder" Seite wird geöffnet

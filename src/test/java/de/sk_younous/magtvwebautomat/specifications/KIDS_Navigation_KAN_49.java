@@ -28,8 +28,8 @@ public class KIDS_Navigation_KAN_49 {
         open(string);
     }
     @Given("Coockies schliesst")
-    public void man_den_coockies_banner_schliesst() {
-        $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible, Duration.ofMillis(3000)).click();
+    public void man_den_coockies_banner_schliesst() throws InterruptedException {
+        $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible).click();
     }
 
     @When("man {string} clickt")

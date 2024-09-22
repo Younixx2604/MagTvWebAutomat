@@ -35,7 +35,7 @@ public class LoginButtonFinden_KAN_T31 {
 
     @Given("man schliesst Coockies")
     public void man_schliesst_cookies() {
-        mainPage.cookiesAkzeptieren.shouldBe(Condition.visible, Duration.ofMillis(3000)).click();
+        mainPage.cookiesAkzeptieren.shouldBe(Condition.visible).click();
     }
 
     @Then("sollte ein roter Login Button sichtbar sein")

@@ -37,7 +37,7 @@ public class LoginButtonNegativ_KAN_33 {
 
     @Given("man die Coockies schliesst")
     public void man_den_coockies_banner_schliesst() {
-        $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible, Duration.ofMillis(3000)).click();
+        $(By.id("OVERLAY-ACCEPT")).shouldBe(Condition.visible).click();
     }
 
     @Given("der Login Button wurde angeklickt und die Login-Seite geöffnet")
